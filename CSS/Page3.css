@@ -1,0 +1,34 @@
+.hidden {
+    display: none !important;
+}
+
+.Page3 {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.HighScore{
+    position: absolute;
+    width: 100vw;
+    text-align: right;
+    top: 5%;
+    right: 7%;
+    color: white;
+}
+.CurrentScore{
+    position: absolute;
+    width: 100vw;
+    text-align: right;
+    top: 10%;
+    right: 7%;
+    color: white;    
+}
+canvas {
+    background-image: url("../Images/Page2_Page3_Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}

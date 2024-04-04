@@ -1,0 +1,233 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* Display none */
+.hidden {
+    display: none !important;
+}
+
+/* Page 1 CSS */
+.Page1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../Images/Page1_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.Page1 h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: sans-serif;
+    color: black;
+    top: 15vh;
+    font-size: 120px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    animation: TubeLightTitle 4s linear infinite;
+}
+
+@keyframes TubeLightTitle {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        text-shadow: 0 0 5px white;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        text-shadow: 0 0 15px white;
+    }
+}
+
+.h1ColorWhite {
+    color: white !important;
+}
+
+.Start {
+    width: 100vw;
+    position: absolute;
+    top: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.StartBtn {
+    width: 100px;
+    height: 100px;
+    border: 5px outset black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../Images/PlayBtn_Background.jpg");
+    background-position: center;
+    background-size: 450%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    animation: rotateStart 1.5s linear infinite;
+    transition: all 0.5s;
+    mix-blend-mode: hard-light;
+}
+
+.fa-volleyball {
+    animation: VolleyballAnimation 3s forwards infinite;
+    color: rgb(0, 57, 8);
+}
+
+@keyframes VolleyballAnimation {
+    0% {
+        font-size: 0px;
+    }
+
+    70% {
+        font-size: 100px;
+    }
+
+    100% {
+        font-size: 0px;
+    }
+}
+
+
+.fa-play {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding-left: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: font-size 0.5s;
+    text-shadow: 0 0 15px rgb(0, 0, 0), 0 0 20px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.fa-play:hover {
+    text-shadow: 0 0 15px white, 0 0 20px white, 0 0 10px white, 0 0 5px white;
+    transform: translate(-50%, -50%) scale(1.2);
+    color: #00340b;
+}
+
+@keyframes rotateStart {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.Page1 .Audio {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.Audio .fa-solid {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.Audio .fa-solid:hover{
+    transform: scale(1.12);
+}
+
+.Audio .fa-solid:active{
+    transform: scale(0.92);
+}
+
+/* Page 1 responsive */
+@media only screen and (max-width: 800px) {
+    .Page1 h1 {
+        font-size: 70px;
+    }
+
+    .StartBtn {
+        width: 70px;
+        height: 70px;
+        border-width: 3px;
+    }
+
+    @keyframes VolleyballAnimation {
+        0% {
+            font-size: 0px;
+        }
+    
+        70% {
+            font-size: 70px;
+        }
+    
+        100% {
+            font-size: 0px;
+        }
+    }
+    .fa-play {
+        font-size: 30px;
+    }
+
+    .Audio .fa-solid {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .Page1 h1 {
+        font-size: 40px;
+    }
+
+    .StartBtn {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+
+    @keyframes VolleyballAnimation {
+        0% {
+            font-size: 0px;
+        }
+    
+        70% {
+            font-size: 50px;
+        }
+    
+        100% {
+            font-size: 0px;
+        }
+    }
+    .fa-play {
+        font-size: 20px;
+    }
+
+    .Audio .fa-solid {
+        font-size: 20px;
+    }
+}
