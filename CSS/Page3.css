@@ -2,13 +2,19 @@
     display: none !important;
 }
 
+/* //Comment for begning:-
+// for (let i = 1; i < BodySize; i++) {
+//     snake.push(circle(snake[i-1].x, canvas.height / 2, ColorName));
+// } */
+
 .Page3 {
     position: relative;
     overflow: hidden;
     height: 100vh;
     width: 100vw;
 }
-.HighScore{
+
+.HighScore {
     position: absolute;
     width: 100vw;
     text-align: right;
@@ -16,14 +22,16 @@
     right: 7%;
     color: white;
 }
-.CurrentScore{
+
+.CurrentScore {
     position: absolute;
     width: 100vw;
     text-align: right;
     top: 10%;
     right: 7%;
-    color: white;    
+    color: white;
 }
+
 canvas {
     background-image: url("../Images/Page2_Page3_Background.jpg");
     background-size: cover;
@@ -31,4 +39,138 @@ canvas {
     background-position: center;
     height: 100vh;
     width: 100vw;
+}
+
+.GamePaused {
+    position: absolute;
+    top: 25%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.GamePaused .Container {
+    height: 350px;
+    width: 400px;
+    background-color: rgb(1, 21, 15);
+    box-shadow: 0px 0px 20px aquamarine, 0px 0px 40px aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.GamePaused .Container button {
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px 0;
+    width: 15rem;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(135, 255, 215);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.GamePaused .Container button:hover {
+    transform: scale(1.08);
+    box-shadow: 1px 3px 4px rgb(0, 0, 0), 1px 0px 15px rgb(255, 255, 255);
+    background-color: rgb(46, 132, 105);
+    color: white;
+}
+
+.GamePaused .Container button:active {
+    transform: scale(0.98);
+}
+
+.GameEnd {
+    position: absolute;
+    top: 23%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.GameEnd .Container {
+    height: 400px;
+    width: 450px;
+    background-color: rgb(2, 37, 27);
+    box-shadow: 0px 0px 20px aquamarine, 0px 0px 40px aquamarine, 0px 0px 10px aquamarine;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.GameEnd .Container .ImageCircle {
+    position: absolute;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgb(99, 187, 160), 0px 0px 40px rgb(99, 187, 160), 0px 0px 10px rgb(99, 187, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GameEnd .Container .ImageCircle img{
+    width: 120px;
+    height: 150px;
+}
+
+.GameEnd .DisplayFinalScore {
+    position: absolute;
+    top: 140px;
+    font-size: 4rem;
+    animation: ScoreBlink 1s linear infinite backwards;
+}
+
+@keyframes ScoreBlink {
+    0% {
+        text-shadow: 0px 0px 1px white,0px 0px 0px rgb(0, 145, 255);
+    }
+
+    50% {
+        text-shadow: 1px 1px 12px white,0px 0px 10px rgb(0, 145, 255);
+    }
+
+    100%{
+        text-shadow: 0px 0px 1px white,0px 0px 0px rgb(0, 145, 255);
+    }
+}
+
+.GameEndBtn {
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.GameEndBtn button {
+    display: block;
+    color: white;
+    font-weight: 700;
+    width: 170px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    padding: 10px 0;
+    background-color: rgb(2, 105, 69);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.GameEndBtn button:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 2px black;
+}
+
+.GameEndBtn button:active {
+    transform: scale(0.99);
+    box-shadow: none;
 }

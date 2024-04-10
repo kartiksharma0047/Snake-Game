@@ -15,7 +15,7 @@
 
 <body>
     <!-- Page 1 -->
-    <div class="Page1 hidden">
+    <div class="Page1">
         <h1 data-value="Snake Game">Snake Game</h1>
         <div class="Start">
             <div class="StartBtn">
@@ -66,10 +66,29 @@
     <script type="module" src="./Javascript/Page2.js"></script>
 
     <!-- Page 3 -->
-    <div class="Page3">
+    <div class="Page3 hidden">
         <h4 class="HighScore">High Score : 000</h4>
         <h4 class="CurrentScore">Score : 000</h4>
         <canvas></canvas>
+        <div class="GamePaused hidden">
+            <div class="Container">
+                <button class="ResumeBtn">Resume</button>
+                <button class="AudioControlBtn">Audio Control</button>
+                <button class="MainMenuBtn">Main Menu</button>
+            </div>
+        </div>
+        <div class="GameEnd hidden">
+            <div class="Container">
+                <div class="ImageCircle">
+                    <img src="" alt="">
+                </div>
+                <h1 class="DisplayFinalScore"></h1>
+                <div class="GameEndBtn">
+                    <button class="RestartBtn">Restart</button>
+                    <button class="MainMenu2">Main Menu</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="module" src="./Javascript/Page3.js"></script>
 </body>

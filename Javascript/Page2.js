@@ -2,13 +2,6 @@ import { Page1, StartGame, playbtn } from "./Page1.js";
 let Page2 = document.querySelector(".Page2");
 let GameStartBtn=document.querySelector(".GameStartsBtn");
 let closeBtn=document.querySelector(".CloseBtn");
-let LevelObject = {
-    EASY: 0,
-    MEDIUM: 0,
-    HARD: 0,
-    EXPERT: 0
-}
-window.localStorage.setItem("LevelHighScore", JSON.stringify(LevelObject));
 
 // Level js variables
 let Level = document.querySelector(".levels h1");
